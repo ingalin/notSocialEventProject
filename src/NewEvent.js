@@ -57,6 +57,7 @@ class NewEvent extends Component {
     render() {
         return (
             <div className="newFormBackground">
+                <ScrollToTopOnMount />
                 <div className="newFormHeaddingForm wrapper">
                     <div className="close"><button onClick={this.closeForm} aria-label="Close window"><FontAwesomeIcon icon={faTimesCircle} /></button></div>
                     <h2 aria-live="polite" className="headdingNewForm">Add Your Own Event!</h2>
