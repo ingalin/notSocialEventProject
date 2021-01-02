@@ -1,0 +1,160 @@
+@media (max-width: 1210px) {
+    // Social events
+    .eventCardsForm, .missedEvent {
+        grid-template-columns: repeat(auto-fill, 450px);
+        fieldset {
+            width: 450px;
+        }
+    }
+
+    .createNewButton {
+        width: 450px;
+    }
+}
+
+@media (max-width: 1030px) {
+    // Social events
+    .eventCardsForm, .missedEvent {
+        grid-template-columns: repeat(auto-fill, 350px);
+        fieldset {
+            width: 350px;
+        }
+    }
+
+    .createNewButton {
+        width: 350px;
+    }
+
+    // New Event Form
+    .newEventForm {
+        padding: 20px 0 0;
+    }
+
+    .close {
+        padding-right: 0;
+    }
+
+    // Results Page
+    .missedEvent .replacetEvent {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    // Social events
+    .eventCardsForm, .missedEvent {
+        grid-template-columns: repeat(auto-fill, 100%);
+        fieldset {
+            width: 100%;
+        }
+    }
+
+    .createNewButton {
+        width: 100%;
+    }
+
+    .toResults {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 15px 0 0;
+        .middleText {
+            text-align: center;
+            margin: 20px 0;
+        }
+    }
+
+    // New Form
+    .dateTimeEnter {
+        flex-direction: column;
+    }
+
+    .newEventForm .dateTimeEnter input {
+        width: 100%;
+    }
+
+    .newEventForm .dateTimeEnter .timeLabel {
+        margin: 20px 0 0;
+    }
+
+    .newFormHeaddingForm {
+        margin-top: 50px;
+    }
+
+    // Delete Form
+    .deleteCancelButtons {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 690px) {
+    // Results Page
+    .missedEvent {
+        flex-direction: column;
+    }
+
+    .missedEvent .replacetEvent {
+        width: 100%;
+    }
+
+    .changeEvent {
+        width: 100%;
+        a {
+            margin: 0;
+            padding: 5px 20px;
+            animation: glow3 2s ease-in-out infinite alternate;
+            font-size: 2.2rem;
+            width: 100%;
+        }
+    }
+
+    .selectGenre h3 {
+        font-size: 2.2rem;
+    }
+
+    .selectGenre .genreDropdown {
+        margin: 0 0 0 10px;
+    }
+
+    .btnContainer a {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 490px) {
+    // Results page
+    .tvShows {
+        justify-content: center;
+    }
+
+    .btnContainer {
+        flex-direction: column;
+        a {
+            margin: 5px 0 18px;
+            width: 100%;
+        }
+    }
+
+    // Footer
+    footer span {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .deleteEventQuestion {
+        padding: 30px 5px;
+    }
+
+    // Results page
+    .selectGenre h3 {
+        font-size: 2rem;
+    }
+
+    .selectGenre .genreDropdown {
+        margin: 0 0 0 5px;
+    }
+}
+
+
+

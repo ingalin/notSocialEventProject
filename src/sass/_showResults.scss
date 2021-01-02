@@ -1,0 +1,106 @@
+// Results Page styles
+// Style Missed Event
+.resultsPage h2 {
+    text-align: left;
+    font-size: 2.7rem;
+}
+
+.missedEvent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    .replacetEvent {
+        width: 50%;
+    }
+    .dateTwo {
+        padding-top: 15px;
+    }
+    .styleGroupTwo {
+        padding: 20px 20px 10px;
+    }
+    .eachEvent{
+        height: auto;
+        border-radius: 5px;
+        border: 2px solid $textColor;
+    }
+}
+
+.changeEvent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    a {
+        margin: 40px 30px 0;
+        padding: 30px 20px;
+        animation: glow3 2s ease-in-out infinite alternate;
+        font-size: 2.2rem;
+    }
+}
+
+// Select genre
+
+.selectGenre {
+    padding: 20px 0;
+    margin: 10px 0 30px;
+    display: flex;
+    align-items: center;
+    border-top: 3px solid $textColor;
+    .genreDropdown {
+        width: 270px;
+        margin: 0 25px;
+        color: $backgroundColor;
+    }
+}
+
+// Style list of TV Shows
+.tvShows {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 210px);
+    grid-gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    li {
+        width: 210px;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .movieData p {
+            font-size: 1.6rem;
+            width: 100%;
+        }
+        .movieData h3 {
+            margin-top: 10px;
+        }
+        .link { 
+            margin-top: 15px; 
+            width: 100%;
+        }
+        .notSelected {
+            background-color: $backgroundColorTwo;
+            color: $backgroundColor;
+            padding: 7.7px 20px;
+            border-radius: 5px;
+            margin-bottom: -7px;
+            font-size: 2rem;
+        }
+    }
+}
+
+.btnContainer {
+    display:flex;
+    justify-content: space-between;
+    margin: 100px 0 60px;
+    a {
+        animation: glow3 2s ease-in-out infinite alternate;
+        min-width: 300px;
+    }
+}
+
+.noShowsMessage {
+    border-top: 3px solid $textColor;
+    padding-top: 30px;
+    font-size: 2rem;
+}

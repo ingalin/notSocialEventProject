@@ -1,0 +1,11 @@
+// import setup and global styles
+@import 'setup';
+@import 'global';
+// events pages styles
+@import 'socialEvents';
+// results page styles
+@import 'showResults';
+// error for when axios call is rejected
+@import 'errorMessage';
+// media queries
+@import 'mediaQueries';

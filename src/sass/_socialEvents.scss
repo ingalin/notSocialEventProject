@@ -1,0 +1,240 @@
+// Social Events styles
+.introduction {
+    margin: 20px 0 15px;
+}
+
+.headerBlock {
+    display: block;
+}
+
+// Each event style
+.eventCardsForm, .missedEvent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    grid-gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    fieldset {
+        width: 350px;
+        margin: 10px 0;
+        padding: 0;
+        min-height: 150px;
+        label {
+            display: block;
+            border-radius: 5px;
+            border: 2px solid $textColor;
+            height: 100%;
+            width: 100%;
+        }
+        .styleGroupOne, .styleGroupTwo {
+            padding: 0 5px 10px 20px;
+            width: 100%;
+        }
+
+        input:focus + label .dateOne, input:hover + label .dateOne, input:checked + label .dateOne, input:focus + label .styleGroupTwo, input:hover + label .styleGroupTwo, input:checked + label .styleGroupTwo {
+            background-color: $backgroundAccent;
+            color: $textColor;
+            .removeEventButton:hover, .removeEventButton:focus {
+                color: $backgroundColor;
+            }
+        }
+
+        input:focus + label .dateTwo, input:hover + label .dateTwo, input:checked + label .dateTwo, input:focus + label .styleGroupOne, input:hover + label .styleGroupOne, input:checked + label .styleGroupOne {
+            background-color: $backgroundColorTwo;
+            color: $backgroundColor;
+            .removeEventButton {
+                color: $backgroundColor;
+                &:hover, &:focus {
+                    color: $accentColor;
+                }
+            }
+        }
+
+    }
+    .eachEvent {
+        display: flex;
+        height: 100%;
+    }
+    // Style event date
+    .dateOne, .dateTwo {
+        padding: 25px 10px 10px;
+        min-width: 140px;
+        .dateInfo {
+            font-size: 3.5rem;
+            span {
+                display: flex; 
+                width: 100%;
+                font-size: 1.6rem;
+                letter-spacing: 2rem;
+                padding: 5px 0 0 5px;
+                font-weight: bold;
+            }
+        }
+        .time {
+            font-size: 1.8rem;
+            font-style: italic;
+            padding-bottom: 10px;
+        }
+    }
+    
+    .dateOne {
+        background-color: $backgroundColorTwo;
+        color: $backgroundColor;
+    }
+    
+    .dateTwo {
+        background-color: $backgroundAccent;
+        color: $textColor;
+    }
+}
+
+// Links to results
+.toResults {
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+    a, .defaultText {
+        min-width: 260px;
+    }
+    .defaultText {
+        background-color: $backgroundColorTwo;
+        color: $backgroundColor;
+    }
+    .middleText {
+        font-size: 6rem;
+        text-transform: uppercase;
+        margin: 10px 40px 0;
+        font-weight: bold;
+    }
+}
+
+// New Event
+.createNewButton {
+    border: 2px solid $backgroundColorTwo;
+    font-size: 2.6rem;
+    height: 100%;
+    width: 350px;
+    animation: glow3 2s ease-in-out infinite alternate;
+    &:hover, &:focus {
+        border: 2px solid $backgroundAccent;
+    }
+}
+
+.newIcon {
+    margin-top: 15px;
+    display: block;
+}
+
+.headdingNewForm {
+    font-size: 4rem;
+}
+
+.newEventForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px;
+    input, label, a {
+        display: block;
+    }
+    input, label {
+        width: 100%;
+    }
+    input {
+        margin: 0 0 20px 0;
+        padding: 15px 0;
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid $backgroundColorTwo;
+        color: $textColor;
+        font-size: 2rem;
+        &:hover, &:focus {
+            border-bottom: 3px solid $accentColor;
+        }
+    }
+    input::placeholder {
+        color: $backgroundColorTwo;
+        opacity: 0.9;
+    } 
+    fieldset {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div {
+            width: 100%;
+        }
+        button {
+            margin-top: 50px;
+        }
+    }
+    .dateTimeEnter {
+        display: flex;
+        label {
+            display: flex;
+            align-items: flex-end;
+            width: 8%;
+            padding-right: 15px;
+        }
+        input {
+            margin: 0;
+            width: 42%;
+        }
+        .timeLabel {
+            margin-left: 20px;
+        }
+    }
+}
+
+// Style Calendar and Time icons
+input[type=date]::-webkit-calendar-picker-indicator, input[type=time]::-webkit-calendar-picker-indicator {
+        filter: invert(98%) sepia(41%) saturate(5806%) hue-rotate(182deg) brightness(106%) contrast(86%);
+}
+
+// Style the New Event form
+.newFormBackground {
+    position: absolute;
+    height: 100vh;
+    min-height: 400px;
+    top: 0;
+    z-index: 2;
+    background-color: $backgroundColor;
+    width: 100%;
+}
+
+.newFormHeaddingForm {
+    margin: 100px auto 30px;
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 100px 30px;
+    button {
+        padding: 5px 15px;
+    }
+    svg {
+        font-size: 3rem;
+    }
+}
+
+.headdingNewForm {
+    line-height: 4rem;
+}
+
+//Remove Event 
+
+.removeEvent {
+    text-align: right;
+    width: 100%;
+    margin-bottom: -14px;
+    .removeEventButton {
+        font-size: 2.4rem;
+        margin: 5px 5px 10px 15px;
+        &:focus {
+            color: $accentColor;
+            outline: 0;
+        }
+    }
+}
+

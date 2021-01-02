@@ -1,0 +1,192 @@
+// FONT VARIABLES
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sulphur+Point&display=swap');
+$bodyFont: 'Roboto', sans-serif;
+$headingFont: 'Sulphur Point', sans-serif;
+
+// COLOUR VARIABLES
+$backgroundColor: #2b2d42;
+$backgroundColorTwo: #E3E6E3;
+$textColor: #edf2f4;
+$accentColor: #ef233c;
+$backgroundAccent: #d90429;
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 1140px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    background: $backgroundColor;
+    font-size: 1.6rem;
+    font-family: $bodyFont;
+    line-height: 2.9rem;
+    color: $textColor;
+}
+
+// Animation and rotation
+@keyframes glow {
+    from {
+        text-shadow: 0 0 15px $backgroundColorTwo;
+    }
+    to {
+        text-shadow: 0 0 20px $backgroundAccent, 0 0 10px $accentColor;
+    }
+}
+
+@keyframes glow2 {
+    from {
+        text-shadow: 0 0 20px $backgroundAccent, 0 0 10px $accentColor;
+    }
+    to {
+        text-shadow: 0 0 15px $backgroundColorTwo;
+    }
+}
+
+@keyframes glow3 {
+    from {
+        box-shadow: 0 0 20px $backgroundAccent, 0 0 10px $accentColor;
+    }
+    to {
+        box-shadow: 0 0 15px $backgroundColorTwo;
+    }
+}
+
+.rotate1 {
+    display: inline-block;
+    transform: rotate(-5deg);
+    margin: 0 0 5px;
+}
+
+.rotate2 {
+    display: inline-block;
+    transform: rotate(6deg);
+    margin: 5px 15px 0;
+}
+
+.rotate3 {
+    display: inline-block;
+    transform: rotate(-5deg); 
+    margin: 5px 15px 15px;
+}
+
+.rotate4 {
+    display: inline-block;
+    transform: rotate(9deg);
+    // margin: 12px 0 0;
+}
+
+.headerHeading, h2, h3, .newEventForm label {
+    font-family: $headingFont;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+}
+
+.newEventForm label {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+}
+
+a, button, .defaultText {
+    background: $accentColor;
+    color: $textColor;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    &:hover, &:focus {
+        background: $backgroundColorTwo;
+        color: $backgroundColor;
+    }
+}
+
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+fieldset {
+    border: none;
+}
+
+// header styles
+.headerHeading {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        padding: 0;
+        margin: 0;
+        animation: glow 2s ease-in-out infinite alternate;
+        font-size: 7rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        line-height: 5.5rem;
+        span {
+            display: block;
+            // margin-bottom: 22px;
+            font-size: 3rem;
+            animation: glow2 2s ease-in-out infinite alternate;
+        }
+    }
+}
+
+// footer styles
+footer {
+    border-top: $backgroundColorTwo 1px solid;
+    text-align: center;
+    margin-top: 100px;
+    padding: 8px 0;
+    font-size: 1.5rem;
+    a {
+        background-color: transparent;
+        text-decoration: underline;
+        padding: 10px 3px;
+        font-size: 1.6rem;
+        &:hover, &:focus {
+            background: none;
+            color: $accentColor;
+        }
+    }
+}
+
