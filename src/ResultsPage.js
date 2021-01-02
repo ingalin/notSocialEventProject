@@ -73,7 +73,7 @@ class ResultsPage extends Component {
                         movieList: northAmericanTV,
                         movieDisplay: northAmericanTV
                     }, () => {
-                        if (northAmericanTV.length == 0)
+                        if (northAmericanTV.length === 0)
                             this.setState({
                                 noMoviesToShow: true
                             })

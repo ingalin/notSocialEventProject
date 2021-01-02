@@ -41,7 +41,7 @@ class SocialEvents extends Component {
                 
                 // inside the loop, we push each book name to an array we already created inside the .on() function called newState
                 //index is used for class names/styling 
-                if (index % 2 == 0) {
+                if (index % 2 === 0) {
                     newState.push({ key: key, eventDetails: data[key], year: eventYear, dayMonth: formattedDate, classIndex: "styleGroupTwo", classIndexDate: "dateTwo"  });
                 }
                 else {
@@ -125,7 +125,8 @@ class SocialEvents extends Component {
                             return (
                                 // On change run the function to update the state
                                 <fieldset key={eachEvent.key} onChange={this.handleChange}>
-                                    <input type="radio" className="check" id={eachEvent.key} name="socialEventCards" value={eachEvent.key} required tabindex="0"/>
+                                    {/* Prevent default submit on key enter to avoid pressing submit a new form */}
+                                    <input type="radio" className="check" id={eachEvent.key} name="socialEventCards" value={eachEvent.key} required onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}/>
                                     <label htmlFor={eachEvent.key} >
                                         <ul className="eachEvent">
                                             <div className={eachEvent.classIndexDate}>
@@ -136,7 +137,7 @@ class SocialEvents extends Component {
                                                 <div className="removeEvent">
                                                     <FontAwesomeIcon tabindex="0" onKeyPress={() => this.showDeleteMessage(eachEvent.key)} onClick={() => this.showDeleteMessage(eachEvent.key)} aria-label="Remove event button" className="removeEventButton" icon={faTimesCircle}/>
                                                 </div>
-                                                {this.state.showDelete && this.state.idClicked == eachEvent.key ?
+                                                {this.state.showDelete && this.state.idClicked === eachEvent.key ?
                                                     <div className="deleteEvent">
                                                         <div className="deleteEventQuestion">
                                                             <h5>Are you sure you want to delete this event:
