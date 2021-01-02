@@ -59,8 +59,8 @@ class NewEvent extends Component {
             <div className="newFormBackground">
                 <div className="newFormHeaddingForm wrapper">
                     <div className="close"><button onClick={this.closeForm} aria-label="Close window"><FontAwesomeIcon icon={faTimesCircle} /></button></div>
-                    <h2 className="headdingNewForm">Add Your Own Event!</h2>
-                    <form className="newEventForm" onSubmit={this.handleSubmit}>
+                    <h2 aria-live="polite" className="headdingNewForm">Add Your Own Event!</h2>
+                    <form className="newEventForm" onSubmit={this.handleSubmit} aria-live="polite">
                         {/* // On change run the function to update the state */}
                         <fieldset>
                             <label htmlFor="newEventName" className="srOnly">Party description </label>

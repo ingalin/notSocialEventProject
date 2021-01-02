@@ -175,7 +175,7 @@ class ResultsPage extends Component {
                             {this.state.loadCheck &&
                                 <ul className="eachEvent">
                                     <div className="dateTwo">
-                                        <li className="time">Time: {socialEvent.eventDetails.time}</li>
+                                        <li className="time">Time: <time dateTime={socialEvent.eventDetails.time}>{socialEvent.eventDetails.time}</time></li>
                                         <li className="dateInfo"><time dateTime={socialEvent.eventDetails.date}>{socialEvent.dayMonth}<span>  {socialEvent.year}</span></time></li>
                                     </div>
                                     <div className="styleGroupTwo">

@@ -130,12 +130,12 @@ class SocialEvents extends Component {
                                     <label htmlFor={eachEvent.key} >
                                         <ul className="eachEvent">
                                             <div className={eachEvent.classIndexDate}>
-                                                <li className="time">Time: {eachEvent.eventDetails.time}</li>
+                                                <li className="time">Time: <time dateTime={eachEvent.eventDetails.time}>{eachEvent.eventDetails.time}</time></li>
                                                 <li className="dateInfo"><time dateTime={eachEvent.eventDetails.date}>{eachEvent.dayMonth}<span>{eachEvent.year}</span></time></li>
                                             </div>
                                             <div className={eachEvent.classIndex}>
                                                 <div className="removeEvent">
-                                                    <FontAwesomeIcon tabindex="0" onKeyPress={() => this.showDeleteMessage(eachEvent.key)} onClick={() => this.showDeleteMessage(eachEvent.key)} aria-label="Remove event button" className="removeEventButton" icon={faTimesCircle}/>
+                                                    <FontAwesomeIcon title="Delete This Event Button" tabindex="0" onKeyPress={() => this.showDeleteMessage(eachEvent.key)} onClick={() => this.showDeleteMessage(eachEvent.key)}  className="removeEventButton" icon={faTimesCircle}/>
                                                 </div>
                                                 {this.state.showDelete && this.state.idClicked === eachEvent.key ?
                                                     <div className="deleteEvent">
