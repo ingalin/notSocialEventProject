@@ -1,7 +1,9 @@
 import { Component } from 'react';
 import firebase from './firebase';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import ScrollToTopOnMount from './ScrollToTopOnMount';
+
 
 class NewEvent extends Component {
     constructor(props) {
