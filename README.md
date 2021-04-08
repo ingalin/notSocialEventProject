@@ -7,6 +7,8 @@ The site is created using REACT, Firebase and TVMAZE API. The base of the app co
 
 Stack used - JavaScript, React, Firebase, HTML, SASS
 
+View Live - https://cranky-kilby-29816c.netlify.app/ 
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
