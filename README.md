@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# NOT-SO-SOCIAL Event Planner
+Are you in lockdown?! 🔐 Tired of going out? This app may help you! Choose an event you don't want to attend and get a TV show list instead.
+
+Manage the event list by adding or removing events. Filter TV shows by genres. Only available genres are shown on a particular day.
+
+The site is created using REACT, Firebase and TVMAZE API. The base of the app code was done in a team. Credits to Victor Hok, Saeed Malakhail and Caitlin Klotz. The webpage design and extra features are added by me.
+
+Stack used - JavaScript, React, Firebase, HTML, SASS
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
